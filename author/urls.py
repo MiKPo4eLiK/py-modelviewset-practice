@@ -5,6 +5,6 @@ app_name = "author"
 
 router = DefaultRouter()
 
-router.register(r'authors', AuthorViewSet, basename='author')
+router.register(r"authors", AuthorViewSet, basename="author")
 
 urlpatterns = router.urls

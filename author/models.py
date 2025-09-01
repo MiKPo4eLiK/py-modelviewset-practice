@@ -9,8 +9,11 @@ class Author(models.Model):
     retired = models.BooleanField()
 
     def __str__(self) -> str:
-        return self.pseudonym if self.pseudonym else f"{
-            self.first_name} {self.last_name}"
+        return (
+            self.pseudonym
+            if self.pseudonym
+            else f"{self.first_name} {self.last_name}"
+        )
 
     class Meta:
         ordering = ["last_name", "first_name"]
